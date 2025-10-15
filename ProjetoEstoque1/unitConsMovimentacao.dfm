@@ -1,4 +1,4 @@
-object formConsMovimentacao: TformConsMovimentacao
+object formConsMovimentacoes: TformConsMovimentacoes
   Left = 0
   Top = 0
   Caption = 'Consulta de Movimenta'#231#245'es'

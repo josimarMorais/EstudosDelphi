@@ -124,19 +124,19 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="unitPrincipal.pas">
-            <Form>Form1</Form>
+            <Form>formPrincipal</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="unitCadProduto.pas">
-            <Form>formCadProduto</Form>
+            <Form>formCadProdutos</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="unitCadMovientacao.pas">
-            <Form>formCadMovimentacao</Form>
+            <Form>formCadMovimentacoes</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="unitConsMovimentacao.pas">
-            <Form>formConsMovimentacao</Form>
+            <Form>formConsMovimentacoes</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="unitDM.pas">

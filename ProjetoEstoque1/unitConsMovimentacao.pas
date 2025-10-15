@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
 
 type
-  TformConsMovimentacao = class(TForm)
+  TformConsMovimentacoes = class(TForm)
   private
     { Private declarations }
   public
@@ -15,7 +15,7 @@ type
   end;
 
 var
-  formConsMovimentacao: TformConsMovimentacao;
+  formConsMovimentacoes: TformConsMovimentacoes;
 
 implementation
 

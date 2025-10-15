@@ -2,10 +2,10 @@ program Estoque;
 
 uses
   Vcl.Forms,
-  unitPrincipal in 'unitPrincipal.pas' {Form1},
-  unitCadProduto in 'unitCadProduto.pas' {formCadProduto},
-  unitCadMovientacao in 'unitCadMovientacao.pas' {formCadMovimentacao},
-  unitConsMovimentacao in 'unitConsMovimentacao.pas' {formConsMovimentacao},
+  unitPrincipal in 'unitPrincipal.pas' {formPrincipal},
+  unitCadProduto in 'unitCadProduto.pas' {formCadProdutos},
+  unitCadMovientacao in 'unitCadMovientacao.pas' {formCadMovimentacoes},
+  unitConsMovimentacao in 'unitConsMovimentacao.pas' {formConsMovimentacoes},
   unitDM in 'unitDM.pas' {DM: TDataModule};
 
 {$R *.res}
@@ -13,10 +13,10 @@ uses
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TForm1, Form1);
-  Application.CreateForm(TformCadProduto, formCadProduto);
-  Application.CreateForm(TformCadMovimentacao, formCadMovimentacao);
-  Application.CreateForm(TformConsMovimentacao, formConsMovimentacao);
+  Application.CreateForm(TformPrincipal, formPrincipal);
+  Application.CreateForm(TformCadProdutos, formCadProdutos);
+  Application.CreateForm(TformCadMovimentacoes, formCadMovimentacoes);
+  Application.CreateForm(TformConsMovimentacoes, formConsMovimentacoes);
   Application.CreateForm(TDM, DM);
   Application.Run;
 end.

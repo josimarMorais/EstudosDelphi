@@ -1,4 +1,4 @@
-object formCadMovimentacao: TformCadMovimentacao
+object formCadMovimentacoes: TformCadMovimentacoes
   Left = 0
   Top = 0
   Caption = 'Cadastro Movimenta'#231#227'o'
