@@ -2,7 +2,7 @@ object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'Form1'
-  ClientHeight = 518
+  ClientHeight = 609
   ClientWidth = 848
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -10,11 +10,12 @@ object Form1: TForm1
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Menu = MainMenu1
   OnShow = FormShow
   TextHeight = 15
   object Label1: TLabel
-    Left = 32
-    Top = 440
+    Left = 128
+    Top = 560
     Width = 152
     Height = 25
     Caption = 'Total de Clientes : '
@@ -26,8 +27,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label2: TLabel
-    Left = 190
-    Top = 440
+    Left = 286
+    Top = 560
     Width = 20
     Height = 25
     Caption = '00'
@@ -39,8 +40,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label3: TLabel
-    Left = 352
-    Top = 440
+    Left = 448
+    Top = 560
     Width = 111
     Height = 25
     Caption = 'Total Sal'#225'rios'
@@ -52,8 +53,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label4: TLabel
-    Left = 469
-    Top = 440
+    Left = 565
+    Top = 560
     Width = 20
     Height = 25
     Caption = '00'
@@ -65,18 +66,18 @@ object Form1: TForm1
     ParentFont = False
   end
   object DBNavigator1: TDBNavigator
-    Left = 32
-    Top = 72
-    Width = 480
-    Height = 25
+    Left = 8
+    Top = 184
+    Width = 830
+    Height = 33
     DataSource = DM.dnCliente
     TabOrder = 0
     OnClick = DBNavigator1Click
   end
   object DBGrid1: TDBGrid
-    Left = 32
-    Top = 112
-    Width = 481
+    Left = 8
+    Top = 232
+    Width = 825
     Height = 305
     DataSource = DM.dnCliente
     TabOrder = 1
@@ -85,5 +86,22 @@ object Form1: TForm1
     TitleFont.Height = -12
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
+  end
+  object Button1: TButton
+    Left = 368
+    Top = 72
+    Width = 75
+    Height = 25
+    Caption = 'Button1'
+    TabOrder = 2
+    OnClick = Button1Click
+  end
+  object MainMenu1: TMainMenu
+    Left = 48
+    Top = 16
+    object CadastrodeUsurios1: TMenuItem
+      Caption = 'Cadastro de Usu'#225'rios'
+      OnClick = CadastrodeUsurios1Click
+    end
   end
 end
