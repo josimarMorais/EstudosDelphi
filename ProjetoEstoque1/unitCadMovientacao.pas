@@ -20,7 +20,17 @@ type
     Label5: TLabel;
     DBNavigator1: TDBNavigator;
     DBGrid1: TDBGrid;
+    Label6: TLabel;
+    DBNavigator2: TDBNavigator;
+    DBLookupComboBox1: TDBLookupComboBox;
+    DBEdit3: TDBEdit;
+    Label7: TLabel;
+    Label8: TLabel;
+    DBGrid2: TDBGrid;
+    Label9: TLabel;
+    txtTotalProdutos: TLabel;
     procedure DBNavigator1Click(Sender: TObject; Button: TNavigateBtn);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -44,6 +54,11 @@ begin
       DM.tbMovimentacoes.FieldByName('dataHora').Value := Now;
     end;
 
+end;
+
+procedure TformCadMovimentacoes.FormShow(Sender: TObject);
+begin
+  DM.calcularTotais;
 end;
 
 end.

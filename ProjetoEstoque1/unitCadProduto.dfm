@@ -13,6 +13,7 @@ object formCadProdutos: TformCadProdutos
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
+  OnShow = FormShow
   TextHeight = 15
   object Label1: TLabel
     Left = 24
@@ -153,7 +154,7 @@ object formCadProdutos: TformCadProdutos
   object DBGrid1: TDBGrid
     Left = 456
     Top = 120
-    Width = 320
+    Width = 318
     Height = 313
     DataSource = DM.dsProdutos
     TabOrder = 5
