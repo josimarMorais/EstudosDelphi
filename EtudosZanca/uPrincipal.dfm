@@ -69,6 +69,7 @@ object Form1: TForm1
     Width = 217
     Height = 23
     TabOrder = 0
+    OnEnter = Edit3Enter
   end
   object Edit4: TEdit
     Left = 8
@@ -76,6 +77,7 @@ object Form1: TForm1
     Width = 217
     Height = 23
     TabOrder = 3
+    OnEnter = Edit4Enter
   end
   object Edit5: TEdit
     Left = 256
@@ -83,14 +85,31 @@ object Form1: TForm1
     Width = 121
     Height = 23
     TabOrder = 4
+    OnEnter = Edit5Enter
+    OnExit = Edit5Exit
   end
   object Button1: TButton
     Left = 256
     Top = 39
     Width = 75
     Height = 25
-    Caption = 'Salvar'
+    Caption = 'Salvar [F1]'
     TabOrder = 5
     OnClick = Button1Click
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 408
+    Width = 624
+    Height = 33
+    Panels = <
+      item
+        Width = 500
+      end
+      item
+        Text = 'Data: 23/10/2025'
+        Width = 50
+      end>
+    ExplicitLeft = -1
   end
 end

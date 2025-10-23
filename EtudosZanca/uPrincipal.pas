@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
   System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls;
 
 type
   TForm1 = class(TForm)
@@ -20,9 +20,14 @@ type
     Button1: TButton;
     Label4: TLabel;
     Label5: TLabel;
+    StatusBar1: TStatusBar;
     procedure FormKeyPress(Sender: TObject; var Key: Char);
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure Button1Click(Sender: TObject);
+    procedure Edit3Enter(Sender: TObject);
+    procedure Edit4Enter(Sender: TObject);
+    procedure Edit5Enter(Sender: TObject);
+    procedure Edit5Exit(Sender: TObject);
   private
     { Private declarations }
   public
@@ -43,7 +48,7 @@ var
 
 begin
 
-  cor := clCream;
+  cor := clWebLightGoldenrodYellow;
   boolValidar := true;
 
   if trim(Edit3.Text) = '' then
@@ -72,13 +77,40 @@ begin
 
 end;
 
+procedure TForm1.Edit3Enter(Sender: TObject);
+begin
+  edit3.Color := clWindow;
+end;
+
+procedure TForm1.Edit4Enter(Sender: TObject);
+begin
+  edit4.Color := clWindow;
+end;
+
+procedure TForm1.Edit5Enter(Sender: TObject);
+begin
+  StatusBar1.Panels[0]. Text := '  Informe apenas Números';
+end;
+
+procedure TForm1.Edit5Exit(Sender: TObject);
+begin
+  StatusBar1.Panels[0]. Text := '';
+end;
+
 procedure TForm1.FormKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
+
   if Key = 13 then
   begin
     Perform(Wm_NextDlgCtl, 0, 0);
   end;
+
+  if key = 112 then
+  begin
+    Button1Click(self);
+  end;
+
 end;
 
 procedure TForm1.FormKeyPress(Sender: TObject; var Key: Char);
