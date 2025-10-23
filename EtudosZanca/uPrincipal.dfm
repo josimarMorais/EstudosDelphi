@@ -16,24 +16,38 @@ object Form1: TForm1
   TextHeight = 15
   object Label1: TLabel
     Left = 8
-    Top = 83
+    Top = 87
     Width = 49
     Height = 15
     Caption = 'Endere'#231'o'
   end
   object Label2: TLabel
     Left = 8
-    Top = 139
-    Width = 37
+    Top = 143
+    Width = 31
     Height = 15
-    Caption = 'Cidade'
+    Caption = 'Bairro'
   end
   object Label3: TLabel
     Left = 8
-    Top = 19
+    Top = 23
     Width = 41
     Height = 15
     Caption = '* Nome'
+  end
+  object Label4: TLabel
+    Left = 8
+    Top = 199
+    Width = 45
+    Height = 15
+    Caption = '* Cidade'
+  end
+  object Label5: TLabel
+    Left = 256
+    Top = 87
+    Width = 44
+    Height = 15
+    Caption = 'N'#250'mero'
   end
   object Edit1: TEdit
     Left = 8
@@ -62,15 +76,13 @@ object Form1: TForm1
     Width = 217
     Height = 23
     TabOrder = 3
-    Text = 'Edit4'
   end
   object Edit5: TEdit
-    Left = 8
-    Top = 280
-    Width = 217
+    Left = 256
+    Top = 104
+    Width = 121
     Height = 23
     TabOrder = 4
-    Text = 'Edit5'
   end
   object Button1: TButton
     Left = 256

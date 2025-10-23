@@ -18,6 +18,8 @@ type
     Edit4: TEdit;
     Edit5: TEdit;
     Button1: TButton;
+    Label4: TLabel;
+    Label5: TLabel;
     procedure FormKeyPress(Sender: TObject; var Key: Char);
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure Button1Click(Sender: TObject);
@@ -35,11 +37,39 @@ implementation
 {$R *.dfm}
 
 procedure TForm1.Button1Click(Sender: TObject);
+var
+  cor : TColor;
+  boolValidar: Boolean;
+
 begin
+
+  cor := clCream;
+  boolValidar := true;
+
   if trim(Edit3.Text) = '' then
   begin
-    ShowMessage('O campo nome é de preenchimento obrigatório!');
+    //ShowMessage('O campo nome é de preenchimento obrigatório!');
+    boolValidar := false;
+    edit3.Color := cor;
   end;
+
+  if trim(Edit4.Text) = '' then
+  begin
+    //ShowMessage('O campo cidade é de preenchimento obrigatório!');
+    boolValidar := false;
+    edit4.Color := cor;
+  end;
+
+  if boolValidar then
+  begin
+    ShowMessage('Cadastro realizado com sucesso!');
+  end
+  else
+  begin
+    ShowMessage('Preencha os campos obrigatórios! ( * ) ');
+  end;
+
+
 end;
 
 procedure TForm1.FormKeyDown(Sender: TObject; var Key: Word;
