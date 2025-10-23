@@ -15,12 +15,12 @@ type
     Edit3: TEdit;
     Label2: TLabel;
     Label3: TLabel;
-    procedure Edit3KeyPress(Sender: TObject; var Key: Char);
-    procedure Edit1KeyPress(Sender: TObject; var Key: Char);
-    procedure Edit2KeyPress(Sender: TObject; var Key: Char);
-    procedure Edit3KeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
-    procedure Edit1KeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
-    procedure Edit2KeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    Edit4: TEdit;
+    Edit5: TEdit;
+    Button1: TButton;
+    procedure FormKeyPress(Sender: TObject; var Key: Char);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -34,50 +34,24 @@ implementation
 
 {$R *.dfm}
 
-procedure TForm1.Edit1KeyDown(Sender: TObject; var Key: Word;
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  if trim(Edit3.Text) = '' then
+  begin
+    ShowMessage('O campo nome é de preenchimento obrigatório!');
+  end;
+end;
+
+procedure TForm1.FormKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
-  if key = 13 then
+  if Key = 13 then
   begin
-    edit2.SetFocus;
+    Perform(Wm_NextDlgCtl, 0, 0);
   end;
 end;
 
-procedure TForm1.Edit1KeyPress(Sender: TObject; var Key: Char);
-begin
-  if Key = #13 then
-  begin
-    Key := #0;
-  end;
-end;
-
-procedure TForm1.Edit2KeyDown(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
-begin
-  if key = 13 then
-  begin
-    edit3.SetFocus;
-  end;
-end;
-
-procedure TForm1.Edit2KeyPress(Sender: TObject; var Key: Char);
-begin
-  if Key = #13 then
-  begin
-    Key := #0;
-  end;
-end;
-
-procedure TForm1.Edit3KeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
-begin
-  if key = 13 then
-  begin
-    edit1.SetFocus;
-  end;
-
-end;
-
-procedure TForm1.Edit3KeyPress(Sender: TObject; var Key: Char);
+procedure TForm1.FormKeyPress(Sender: TObject; var Key: Char);
 begin
   if Key = #13 then
   begin

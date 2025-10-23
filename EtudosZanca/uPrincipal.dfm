@@ -10,6 +10,9 @@ object Form1: TForm1
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  KeyPreview = True
+  OnKeyDown = FormKeyDown
+  OnKeyPress = FormKeyPress
   TextHeight = 15
   object Label1: TLabel
     Left = 8
@@ -28,9 +31,9 @@ object Form1: TForm1
   object Label3: TLabel
     Left = 8
     Top = 19
-    Width = 33
+    Width = 41
     Height = 15
-    Caption = 'Nome'
+    Caption = '* Nome'
   end
   object Edit1: TEdit
     Left = 8
@@ -38,8 +41,6 @@ object Form1: TForm1
     Width = 217
     Height = 23
     TabOrder = 1
-    OnKeyDown = Edit1KeyDown
-    OnKeyPress = Edit1KeyPress
   end
   object Edit2: TEdit
     Left = 8
@@ -47,8 +48,6 @@ object Form1: TForm1
     Width = 217
     Height = 23
     TabOrder = 2
-    OnKeyDown = Edit2KeyDown
-    OnKeyPress = Edit2KeyPress
   end
   object Edit3: TEdit
     Left = 8
@@ -56,7 +55,30 @@ object Form1: TForm1
     Width = 217
     Height = 23
     TabOrder = 0
-    OnKeyDown = Edit3KeyDown
-    OnKeyPress = Edit3KeyPress
+  end
+  object Edit4: TEdit
+    Left = 8
+    Top = 216
+    Width = 217
+    Height = 23
+    TabOrder = 3
+    Text = 'Edit4'
+  end
+  object Edit5: TEdit
+    Left = 8
+    Top = 280
+    Width = 217
+    Height = 23
+    TabOrder = 4
+    Text = 'Edit5'
+  end
+  object Button1: TButton
+    Left = 256
+    Top = 39
+    Width = 75
+    Height = 25
+    Caption = 'Salvar'
+    TabOrder = 5
+    OnClick = Button1Click
   end
 end
