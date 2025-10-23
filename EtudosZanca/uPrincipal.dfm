@@ -31,14 +31,14 @@ object Form1: TForm1
   end
   object Label10: TLabel
     Left = 8
-    Top = 144
+    Top = 128
     Width = 83
     Height = 15
     Caption = 'Endere'#231'amento'
   end
   object Label11: TLabel
     Left = 360
-    Top = 144
+    Top = 128
     Width = 68
     Height = 15
     Caption = 'Documentos'
@@ -50,15 +50,6 @@ object Form1: TForm1
     Height = 23
     TabOrder = 0
     OnEnter = Edit3Enter
-  end
-  object Button1: TButton
-    Left = 8
-    Top = 15
-    Width = 75
-    Height = 25
-    Caption = 'Salvar [F1]'
-    TabOrder = 4
-    OnClick = Button1Click
   end
   object StatusBar1: TStatusBar
     Left = 0
@@ -77,42 +68,6 @@ object Form1: TForm1
     ExplicitTop = 408
     ExplicitWidth = 624
   end
-  object Button2: TButton
-    Left = 120
-    Top = 15
-    Width = 75
-    Height = 25
-    Caption = 'Pesquisa [F2]'
-    TabOrder = 5
-    OnClick = Button2Click
-  end
-  object Button3: TButton
-    Left = 240
-    Top = 15
-    Width = 75
-    Height = 25
-    Caption = 'Exclus'#227'o [F3]'
-    TabOrder = 6
-    OnClick = Button3Click
-  end
-  object Button4: TButton
-    Left = 376
-    Top = 15
-    Width = 75
-    Height = 25
-    Caption = 'Limpar [F4]'
-    TabOrder = 7
-    OnClick = Button4Click
-  end
-  object Button5: TButton
-    Left = 502
-    Top = 15
-    Width = 75
-    Height = 25
-    Caption = 'Sair [ESC]'
-    TabOrder = 8
-    OnClick = Button5Click
-  end
   object MaskEdit1: TMaskEdit
     Left = 240
     Top = 88
@@ -125,10 +80,13 @@ object Form1: TForm1
   end
   object Panel1: TPanel
     Left = 360
-    Top = 165
+    Top = 149
     Width = 217
     Height = 135
     TabOrder = 3
+    DesignSize = (
+      217
+      135)
     object Label7: TLabel
       Left = 8
       Top = 74
@@ -148,6 +106,7 @@ object Form1: TForm1
       Top = 95
       Width = 118
       Height = 23
+      Anchors = [akLeft, akTop, akRight, akBottom]
       EditMask = '00.000.000-a;0;_'
       MaxLength = 12
       TabOrder = 1
@@ -158,6 +117,7 @@ object Form1: TForm1
       Top = 34
       Width = 119
       Height = 23
+      Anchors = [akLeft, akTop, akRight, akBottom]
       EditMask = ' 000.000.00-00;0;_'
       MaxLength = 14
       TabOrder = 0
@@ -166,10 +126,13 @@ object Form1: TForm1
   end
   object Panel2: TPanel
     Left = 8
-    Top = 165
+    Top = 149
     Width = 331
     Height = 251
     TabOrder = 2
+    DesignSize = (
+      331
+      251)
     object Label1: TLabel
       Left = 18
       Top = 17
@@ -210,6 +173,7 @@ object Form1: TForm1
       Top = 34
       Width = 287
       Height = 23
+      Anchors = [akLeft, akTop, akRight, akBottom]
       TabOrder = 0
     end
     object Edit2: TEdit
@@ -217,6 +181,7 @@ object Form1: TForm1
       Top = 94
       Width = 287
       Height = 23
+      Anchors = [akLeft, akTop, akRight, akBottom]
       TabOrder = 1
     end
     object Edit4: TEdit
@@ -224,6 +189,7 @@ object Form1: TForm1
       Top = 146
       Width = 287
       Height = 23
+      Anchors = [akLeft, akTop, akRight, akBottom]
       TabOrder = 2
       OnEnter = Edit4Enter
     end
@@ -232,6 +198,7 @@ object Form1: TForm1
       Top = 206
       Width = 120
       Height = 23
+      Anchors = [akLeft, akTop, akRight, akBottom]
       TabOrder = 4
       OnEnter = Edit5Enter
       OnExit = Edit5Exit
@@ -241,10 +208,64 @@ object Form1: TForm1
       Top = 206
       Width = 118
       Height = 23
+      Anchors = [akLeft, akTop, akRight, akBottom]
       EditMask = '00000\-999;1;_'
       MaxLength = 9
       TabOrder = 3
       Text = '     -   '
+    end
+  end
+  object Panel3: TPanel
+    Left = 0
+    Top = 0
+    Width = 637
+    Height = 41
+    Align = alTop
+    TabOrder = 5
+    object Button1: TButton
+      Left = 8
+      Top = 6
+      Width = 75
+      Height = 25
+      Caption = 'Salvar [F1]'
+      TabOrder = 0
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Left = 120
+      Top = 6
+      Width = 75
+      Height = 25
+      Caption = 'Pesquisa [F2]'
+      TabOrder = 1
+      OnClick = Button2Click
+    end
+    object Button3: TButton
+      Left = 240
+      Top = 6
+      Width = 75
+      Height = 25
+      Caption = 'Exclus'#227'o [F3]'
+      TabOrder = 2
+      OnClick = Button3Click
+    end
+    object Button4: TButton
+      Left = 376
+      Top = 6
+      Width = 75
+      Height = 25
+      Caption = 'Limpar [F4]'
+      TabOrder = 3
+      OnClick = Button4Click
+    end
+    object Button5: TButton
+      Left = 502
+      Top = 6
+      Width = 75
+      Height = 25
+      Caption = 'Sair [ESC]'
+      TabOrder = 4
+      OnClick = Button5Click
     end
   end
 end

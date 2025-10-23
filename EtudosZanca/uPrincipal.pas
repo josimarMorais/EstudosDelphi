@@ -12,12 +12,7 @@ type
   TForm1 = class(TForm)
     Edit3: TEdit;
     Label3: TLabel;
-    Button1: TButton;
     StatusBar1: TStatusBar;
-    Button2: TButton;
-    Button3: TButton;
-    Button4: TButton;
-    Button5: TButton;
     MaskEdit1: TMaskEdit;
     Label9: TLabel;
     Panel1: TPanel;
@@ -38,6 +33,12 @@ type
     Label6: TLabel;
     Label10: TLabel;
     Label11: TLabel;
+    Panel3: TPanel;
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    Button4: TButton;
+    Button5: TButton;
     procedure FormKeyPress(Sender: TObject; var Key: Char);
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure Button1Click(Sender: TObject);
